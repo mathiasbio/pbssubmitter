@@ -1,0 +1,4 @@
+alias submit_small='PWD/submit_wrapper.sh small'
+alias submit_medium='PWD/submit_wrapper.sh medium'
+alias submit_large='PWD/submit_wrapper.sh large'
+alias asamtools='echo singularity run --bind /hpcnfs /hpcnfs/techunits/bioinformatics/singularity/gatk_4.1.9.0.sif samtools'

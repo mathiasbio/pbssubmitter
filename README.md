@@ -21,6 +21,7 @@ submit_small "$(asamtools) index /full/path/to/SRR5665260.Aligned.sortedByCoord.
 ### logging and generated qsub-scripts
 
 The scripts works by generating qsub-scripts from the argument given to the alias. This is nice to keep track on what jobs you have done.
-In the submit_wrapper.sh you can set your own qsub_scripts dir of choice as well as the place where the qsub standard outs and errs are placed.
+In the submit_wrapper.sh the path to where the qsubscripts will be saved is set as well as where the logfiles from the standard out and errs from the qsub command. 
+You can change these however you want.
 
 You can customize this however you want...it's just a simple example

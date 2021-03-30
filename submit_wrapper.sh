@@ -18,11 +18,14 @@ else
 fi
 
 argument_tool=$(echo "$argument" | sed 's/\(singularity.*\.sif \)//g' | cut -d" " -f1,2 | sed 's/ /_/g')
+if [ ! -z "$(echo "$argument_tool" | grep "/")" ]; then
+    argument_tool=$(basename $argument_tool)
+fi
 jobname=$(echo "${argument_tool}_${user}_${date}")
 
 # setting log and scripts dir and creating if they do not already exist
 logs=$(echo "/hpcnfs/home/$user/scripts/run_jobs/qsubouts")
-scripts=$(echo "/hpcnfs/home/ieo5503er=$(whoami)scripts/run_jobs/qsubscripts")
+scripts=$(echo "/hpcnfs/home/$user/scripts/run_jobs/qsubscripts")
 if [ ! -d "$logs" ]; then
     mkdir -p $logs
 fi

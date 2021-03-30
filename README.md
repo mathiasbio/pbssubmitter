@@ -6,7 +6,7 @@ No need to write qsub scripts, you can simply run ./install.sh which will add so
 
 Then you can use these aliases in the following way
 
-*Example:*
+**Example:**
 
 submit_small "singularity run --bind /hpcnfs /hpcnfs/techunits/bioinformatics/singularity/gatk_4.1.9.0.sif samtools index /full/path/to/SRR5665260.Aligned.sortedByCoord.out.bam"
 

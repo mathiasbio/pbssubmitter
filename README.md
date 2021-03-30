@@ -17,3 +17,10 @@ alias asamtools='echo singularity run --bind /hpcnfs /hpcnfs/techunits/bioinform
 Where the same command would be instead:
 
 submit_small "$(asamtools) index /full/path/to/SRR5665260.Aligned.sortedByCoord.out.bam"
+
+### logging and generated qsub-scripts
+
+The scripts works by generating qsub-scripts from the argument given to the alias. This is nice to keep track on what jobs you have done.
+In the submit_wrapper.sh you can set your own qsub_scripts dir of choice as well as the place where the qsub standard outs and errs are placed.
+
+You can customize this however you want...it's just a simple example
